@@ -41,11 +41,21 @@ func animal(animales string) (func(cantidad int) float64, string) {
 func main() {
 
 	animalPerro, msg1 := animal(Perro)
+	if msg1 != "" {
+		panic(msg1)
+	}
 	animalGato, msg2 := animal(Gato)
+	if msg2 != "" {
+		panic(msg1)
+	}
 	animalHamster, msg3 := animal(Hamster)
+	if msg3 != "" {
+		panic(msg1)
+	}
 	animalTarantula, msg4 := animal(Tarantula)
-
-	fmt.Printf(msg1, msg2, msg3, msg4)
+	if msg4 != "" {
+		panic(msg1)
+	}
 
 	var amount float64
 	amount += animalPerro(10)
@@ -53,4 +63,6 @@ func main() {
 	amount += animalHamster(10)
 	amount += animalTarantula(10)
 
+	fmt.Printf("%.2f kg de comida en total", amount)
+	fmt.Printf(msg1, msg2, msg3, msg4)
 }
