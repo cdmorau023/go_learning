@@ -1,4 +1,4 @@
-package main
+package CalcularCantidadAlimento
 
 import "fmt"
 
@@ -10,29 +10,29 @@ const (
 	Tarantula = "tarantula"
 )
 
-func perro(cantidadAnimal int) float64 {
+func CantidadAlimento_perro(cantidadAnimal int) float64 {
 	return float64(cantidadAnimal) * 10
 }
-func gato(cantidadAnimal int) float64 {
+func CantidadAlimento_gato(cantidadAnimal int) float64 {
 	return float64(cantidadAnimal) * 5
 }
-func hamster(cantidadAnimal int) float64 {
+func CantidadAlimento_hamster(cantidadAnimal int) float64 {
 	return float64(cantidadAnimal) * 0.250
 }
-func tarantula(cantidadAnimal int) float64 {
+func CantidadAlimento_tarantula(cantidadAnimal int) float64 {
 	return float64(cantidadAnimal) * 0.150
 }
-func animal(animales string) (func(cantidad int) float64, string) {
+func CantidadAlimento_animal(animales string) (func(cantidad int) float64, string) {
 	var msg string
 	switch animales {
 	case Perro:
-		return perro, msg
+		return CantidadAlimento_perro, msg
 	case Gato:
-		return gato, msg
+		return CantidadAlimento_gato, msg
 	case Hamster:
-		return hamster, msg
+		return CantidadAlimento_hamster, msg
 	case Tarantula:
-		return tarantula, msg
+		return CantidadAlimento_tarantula, msg
 	default:
 		msg = "Animal no encontrado"
 		return nil, msg
@@ -41,19 +41,19 @@ func animal(animales string) (func(cantidad int) float64, string) {
 }
 func main() {
 
-	animalPerro, msg1 := animal(Perro)
+	animalPerro, msg1 := CantidadAlimento_animal(Perro)
 	if msg1 != "" {
 		panic(msg1)
 	}
-	animalGato, msg2 := animal(Gato)
+	animalGato, msg2 := CantidadAlimento_animal(Gato)
 	if msg2 != "" {
 		panic(msg1)
 	}
-	animalHamster, msg3 := animal(Hamster)
+	animalHamster, msg3 := CantidadAlimento_animal(Hamster)
 	if msg3 != "" {
 		panic(msg1)
 	}
-	animalTarantula, msg4 := animal(Tarantula)
+	animalTarantula, msg4 := CantidadAlimento_animal(Tarantula)
 	if msg4 != "" {
 		panic(msg1)
 	}

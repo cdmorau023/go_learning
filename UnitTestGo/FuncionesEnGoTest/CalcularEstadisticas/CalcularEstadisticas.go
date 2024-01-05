@@ -1,4 +1,4 @@
-package main
+package CalcularEstadisticas
 
 import (
 	"errors"
@@ -11,7 +11,9 @@ const (
 	maximum = "maximum"
 )
 
-func funMin(values ...uint) (min float64) {
+//funcion que calcula el valor minimo
+
+func FunMin(values ...uint) (min float64) {
 	min = float64(values[0])
 	for _, value := range values {
 		if float64(value) < min {
@@ -21,7 +23,9 @@ func funMin(values ...uint) (min float64) {
 	return
 }
 
-func funMax(values ...uint) (max float64) {
+//Funcion que calcula el valor maximo
+
+func FunMax(values ...uint) (max float64) {
 	max = float64(values[0])
 	for _, value := range values {
 		if float64(value) > max {
@@ -31,7 +35,9 @@ func funMax(values ...uint) (max float64) {
 	return
 }
 
-func funMedia(values ...uint) (media float64) {
+//Funcion que calcula el promedio
+
+func FunMedia(values ...uint) (media float64) {
 
 	media = 0
 	for _, value := range values {
@@ -41,20 +47,24 @@ func funMedia(values ...uint) (media float64) {
 	return
 }
 
+//Funcion que recibe un string y devuelve una funcion y un error
+
 func operation(operador string) (func(values ...uint) float64, error) {
 
 	switch operador {
 	case minimum:
-		return funMin, nil
+		return FunMin, nil
 	case maximum:
-		return funMax, nil
+		return FunMax, nil
 	case average:
-		return funMedia, nil
+		return FunMedia, nil
 	default:
 		return nil, errors.New("no se encontró operación")
 	}
 
 }
+
+// Funcion principal
 func main() {
 	var err error
 	minFunc, err := operation(minimum)
