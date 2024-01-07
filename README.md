@@ -230,3 +230,94 @@ amount += animalCat(10)
 
 ### [Solucion](https://github.com/cdmorau023/go_learning/tree/main/FuncionesEnGo/CalcularCantidadAlimento/main.go)
 
+
+# Testing
+
+## Ejercicio 1 - Testear el impuesto del salario
+La  empresa de chocolates que anteriormente necesitaba calcular el impuesto de sus empleados al momento de depositar el sueldo de los mismos ahora nos solicitó validar que los cálculos de estos impuestos están correctos. Para esto nos encargaron el trabajo de realizar los test correspondientes para:
+
+Calcular el impuesto en caso de que el empleado gane por debajo de $50.000.
+Calcular el impuesto en caso de que el empleado gane por encima de $50.000.
+Calcular el impuesto en caso de que el empleado gane por encima de $150.000.
+
+### [Solucion](https://github.com/cdmorau023/go_learning/tree/main/UnitTestGo/FuncionesEnGoTest/ImpuestosDeSalario/ImpuestosDeSalario_test.go)
+
+## Ejercicio 2 - Calcular promedio
+El colegio informó que las operaciones para calcular el promedio no se están realizando correctamente, por lo que ahora nos corresponde realizar los test correspondientes:
+
+Calcular el promedio de las notas de los alumnos.
+
+### [Solucion](https://github.com/cdmorau023/go_learning/tree/main/UnitTestGo/FuncionesEnGoTest/CalcularPromedio/CalcularPromedio_test.go)
+
+## Ejercicio 3 - Test del salario
+La empresa marinera no está de acuerdo con los resultados obtenidos en los cálculos de los salarios, por ello nos piden realizar una serie de tests sobre nuestro programa. Necesitaremos realizar las siguientes pruebas en nuestro código:
+
+Calcular el salario de la categoría “A”.
+Calcular el salario de la categoría “B”.
+Calcular el salario de la categoría “C”.
+
+### [Solucion](https://github.com/cdmorau023/go_learning/tree/main/UnitTestGo/FuncionesEnGoTest/CalcularSalario/CalcularSalario_test.go)
+
+## Ejercicio 4 - Testear el cálculo de estadísticas
+Los profesores de la universidad de Colombia, entraron al programa de análisis de datos  de Google, el cual premia a los mejores estadísticos de la región. Por ello los profesores nos solicitaron comprobar el correcto funcionamiento de nuestros cálculos estadísticos. Se solicita la siguiente tarea:
+
+Realizar test para calcular el mínimo de calificaciones.
+Realizar test para calcular el máximo de calificaciones.
+Realizar test para calcular el promedio de calificaciones.
+
+
+### [Solucion](https://github.com/cdmorau023/go_learning/tree/main/UnitTestGo/FuncionesEnGoTest/CalcularEstadisticas/CalcularEstadisticas_test.go)
+
+## Ejercicio 5 - Calcular cantidad de alimento
+
+El refugio de animales envió una queja ya que el cálculo total de alimento a comprar no fue el correcto y compraron menos alimento del que necesitaban. Para mantener satisfecho a nuestro cliente deberemos realizar los test necesarios para verificar que todo funcione correctamente:
+
+Verificar el cálculo de la cantidad de alimento para los perros.
+Verificar el cálculo de la cantidad de alimento para los gatos.
+Verificar el cálculo de la cantidad de alimento para los hamster.
+Verificar el cálculo de la cantidad de alimento para las tarántulas.
+
+Ejemplo:
+
+```go
+func TestDog(t *testing.T)
+
+func TestCat(t *testing.T)
+```
+
+### [Solucion](https://github.com/cdmorau023/go_learning/tree/main/UnitTestGo/FuncionesEnGoTest/CalcularCantidadAlimento/CalcularCantidadAlimento_test.go)
+
+
+
+# Composición 
+
+## Ejercicio 1 Product
+
+Crear un programa que cumpla los siguiente puntos:
+
+1. Tener una estructura llamada Product con los campos ID, Name, Price, Description y Category.   
+2. Tener un slice global de Product llamado Products instanciado con valores.
+3. métodos asociados a la estructura Product: Save(), GetAll(). El método Save() deberá tomar el slice de Products y añadir el producto desde el cual se llama al método. El método GetAll() deberá imprimir todos los productos guardados en el slice Products.
+4. Una función getById() al cual se le deberá pasar un INT como parámetro y retorna el producto correspondiente al parámetro pasado.
+5. Ejecutar al menos una vez cada método y función definido desde main().
+
+
+### [Solucion](https://github.com/cdmorau023/go_learning/tree/main/EstructurasYMetodos/Productos/main.go)
+
+
+
+## Ejercicio 2 - Employee
+
+Una empresa necesita realizar una buena gestión de sus empleados, para esto realizaremos un pequeño programa nos ayudará a gestionar correctamente dichos empleados. Los objetivos son:
+
+1. Crear una estructura Person con los campos ID, Name, DateOfBirth.
+2. Crear una estructura Employee con los campos: ID, Position y una composición con la estructura Person.
+3. Realizar el método a la estructura Employe que se llame PrintEmployee(), lo que hará es realizar la impresión de los campos de un empleado.
+4. Instanciar en la función main() tanto una Person como un Employee cargando sus respectivos campos y por último ejecutar el método PrintEmployee().
+
+5. Si logras realizar este pequeño programa pudiste ayudar a la empresa a solucionar la gestión de los empleados.
+
+
+### [Solucion](https://github.com/cdmorau023/go_learning/tree/main/EstructurasYMetodos/Employee/main.go)
+
+

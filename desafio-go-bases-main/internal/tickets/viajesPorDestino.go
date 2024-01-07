@@ -1,0 +1,5 @@
+package tickets
+
+func getViajesPorDestino() {
+
+}
